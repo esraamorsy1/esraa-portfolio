@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Esraa Mohamed — Machine Learning Engineer & Data Scientist. Explore my portfolio of AI projects, data science work, and professional certifications.">
+    <meta name="keywords"
+        content="Machine Learning, Data Science, AI Engineer, Portfolio, Esraa Mohamed, Python, Deep Learning">
+    <meta name="author" content="Esraa Mohamed Mahmoud Morsy">
+    <title>Esraa Mohamed — ML Engineer & Data Scientist</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- PDF.js for CV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <!-- Mammoth.js for DOCX parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════
+         PARTICLE CANVAS BACKGROUND
+         ═══════════════════════════════════════ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ═══════════════════════════════════════
+         NAVIGATION BAR
+         ═══════════════════════════════════════ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-accent">E</span>sraa<span class="logo-dot">.</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════ -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-image-wrapper reveal-left">
+                <div class="hero-image-glow"></div>
+                <img src="Professional Photo.jpeg" alt="Esraa Mohamed" class="hero-image" id="hero-image">
+                <div class="hero-image-ring"></div>
+            </div>
+            <div class="hero-content reveal-right">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name" data-editable="hero-name">Esraa Mohamed</h1>
+                <div class="hero-title-wrapper">
+                    <span id="typed-text" class="typed-text"></span><span class="typed-cursor">|</span>
+                </div>
+                <p class="hero-tagline" data-editable="hero-tagline">I create AI solutions to solve real-world
+                    problems.</p>
+                <div class="hero-buttons">
+                    <a href="my_cv (DEPI).pdf" download class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"
+                        class="social-link" data-editable="social-linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-link"
+                        data-editable="social-github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:esraa@example.com" aria-label="Email" class="social-link"
+                        data-editable="social-email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT SECTION
+         ═══════════════════════════════════════ -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="section-number">01.</span> About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text reveal-left">
+                    <div class="about-usp glass-card" data-editable="about-usp">
+                        <p class="about-lead">
+                            Machine Learning Engineering Trainee at <strong>DEPI</strong> with a strong background in
+                            Computer Science from <strong>HTI</strong>. My journey in data began with an intensive
+                            120-hour Data Science program at <strong>NTI</strong>, where I mastered Python, SQL, and
+                            predictive modeling. Currently, I specialize in building end-to-end AI pipelines, focusing
+                            on
+                            <strong>Computer Vision</strong> and <strong>NLP</strong>, while managing experiments using
+                            MLflow and Azure ML.
+                        </p>
+                        <p>
+                            With a certification in Professional Foundations from <strong>ALX</strong>, I combine
+                            technical rigor with strong communication and problem-solving skills to build impactful AI
+                            solutions. I love turning complex data into actionable insights, as seen in my work on
+                            Mental
+                            Health Prediction and Forex Rates Analysis.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-stats reveal-right">
+                    <div class="stat-card glass-card">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">Certificates</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-number" data-target="120">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Training Hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SKILLS SECTION
+         ═══════════════════════════════════════ -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="section-number">02.</span> Skills
+            </h2>
+            <div class="skills-grid">
+
+                <!-- Programming -->
+                <div class="skill-category glass-card reveal-up">
+                    <div class="skill-category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-item" data-skill="Python" data-level="95">
+                            <div class="skill-info"><span>Python</span><span class="skill-percent">95%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="SQL" data-level="85">
+                            <div class="skill-info"><span>SQL</span><span class="skill-percent">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="R" data-level="60">
+                            <div class="skill-info"><span>R</span><span class="skill-percent">60%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science & ML -->
+                <div class="skill-category glass-card reveal-up">
+                    <div class="skill-category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Machine Learning & Data Science</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-item" data-skill="Pandas" data-level="95">
+                            <div class="skill-info"><span>Pandas / NumPy</span><span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Scikit-learn" data-level="90">
+                            <div class="skill-info"><span>Scikit-learn</span><span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Matplotlib" data-level="85">
+                            <div class="skill-info"><span>Matplotlib / Seaborn</span><span
+                                    class="skill-percent">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="NLP" data-level="75">
+                            <div class="skill-info"><span>NLP / Computer Vision</span><span
+                                    class="skill-percent">75%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category glass-card reveal-up">
+                    <div class="skill-category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-item" data-skill="Git" data-level="85">
+                            <div class="skill-info"><span>Git / GitHub</span><span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Jupyter" data-level="90">
+                            <div class="skill-info"><span>Jupyter / Colab</span><span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="MLflow" data-level="70">
+                            <div class="skill-info"><span>MLflow / Azure ML</span><span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category glass-card reveal-up">
+                    <div class="skill-category-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+                        <span class="skill-tag"><i class="fas fa-comments"></i> Communication</span>
+                        <span class="skill-tag"><i class="fas fa-handshake"></i> Teamwork</span>
+                        <span class="skill-tag"><i class="fas fa-clock"></i> Time Management</span>
+                        <span class="skill-tag"><i class="fas fa-search"></i> Critical Thinking</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Project Management</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         EXPERIENCE SECTION
+         ═══════════════════════════════════════ -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="section-number">03.</span> Experience
+            </h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card" data-editable="exp-depi">
+                        <div class="timeline-date">Dec 2025 – Present</div>
+                        <h3 class="timeline-title">Machine Learning Engineer Trainee</h3>
+                        <h4 class="timeline-org"><i class="fas fa-building"></i> DEPI</h4>
+                        <ul class="timeline-details">
+                            <li>Designed and deployed end-to-end Computer Vision & NLP models</li>
+                            <li>Managed experiments using MLflow and Azure ML</li>
+                            <li>Executed EDA, Feature Engineering (SMOTE), Hyperparameter Tuning</li>
+                            <li>Tech Stack: Python, Scikit-learn, predictive modeling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card" data-editable="exp-nti">
+                        <div class="timeline-date">Jun 2025 – Jul 2025</div>
+                        <h3 class="timeline-title">Data Science Trainee</h3>
+                        <h4 class="timeline-org"><i class="fas fa-building"></i> NTI</h4>
+                        <ul class="timeline-details">
+                            <li>120 hours of hands-on Data Science & Machine Learning training</li>
+                            <li>Python, SQL, Pandas, Scikit-Learn, XGBoost, K-Means</li>
+                            <li>Feature Engineering (SMOTE), Hyperparameter Tuning, Model Evaluation</li>
+                            <li>Tools: Jupyter Notebook, Google Colab, Matplotlib, Seaborn</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card" data-editable="exp-alx">
+                        <div class="timeline-date">Aug 2024 – Oct 2024</div>
+                        <h3 class="timeline-title">Professional Foundations Trainee</h3>
+                        <h4 class="timeline-org"><i class="fas fa-building"></i> ALX Africa</h4>
+                        <ul class="timeline-details">
+                            <li>Completed a 3-month intensive program on soft skills for tech careers</li>
+                            <li>Applied Critical Thinking & Project Management in team projects</li>
+                            <li>Core Skills: Communication, Problem-Solving, Time Management, Teamwork</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS SECTION
+         ═══════════════════════════════════════ -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="section-number">04.</span> Projects
+            </h2>
+            <div class="projects-grid" id="projects-grid">
+
+                <div class="project-card glass-card reveal-up" data-editable="proj-1">
+                    <div class="project-image-wrapper">
+                        <div class="project-placeholder"><i class="fas fa-brain"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Mental Health Prediction</h3>
+                        <p class="project-desc">Collaborated to build a model predicting mental-health treatment
+                            needs; full pipeline from preprocessing to evaluation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">SMOTE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" data-editable="proj-2">
+                    <div class="project-image-wrapper">
+                        <div class="project-placeholder"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Forex Market Analysis</h3>
+                        <p class="project-desc">Multi-year currency analysis vs. USD; time-series exploration,
+                            visualization, and predictive insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Seaborn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" data-editable="proj-3">
+                    <div class="project-image-wrapper">
+                        <div class="project-placeholder"><i class="fas fa-heartbeat"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Stroke Dataset Analysis</h3>
+                        <p class="project-desc">Analyzed patient stroke dataset to predict risk factors and support
+                            early interventions using classification models.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" data-editable="proj-4">
+                    <div class="project-image-wrapper">
+                        <div class="project-placeholder"><i class="fas fa-ship"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Titanic Survival Prediction</h3>
+                        <p class="project-desc">Predicting survival on Titanic dataset using ML techniques, feature
+                            engineering and model optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">XGBoost</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" data-editable="proj-5">
+                    <div class="project-image-wrapper">
+                        <div class="project-placeholder"><i class="fas fa-home"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Boston Housing Price Prediction</h3>
+                        <p class="project-desc">Regression analysis to predict housing prices based on various features
+                            using multiple ML models.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         EDUCATION & CERTIFICATES SECTION
+         ═══════════════════════════════════════ -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="section-number">05.</span> Education & Certificates
+            </h2>
+
+            <!-- Education -->
+            <div class="edu-grid">
+                <div class="edu-card glass-card reveal-left" data-editable="edu-hti">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Bachelor of Science — Computer Science</h3>
+                    <h4>Higher Technological Institute (HTI), 10th of Ramadan City</h4>
+                    <p class="edu-year"><i class="fas fa-calendar-alt"></i> Sep 2023 – Present</p>
+                    <p class="edu-details">Relevant coursework in AI, Machine Learning, Data Structures, and Data
+                        Science.</p>
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <h3 class="subsection-title reveal-up"><i class="fas fa-award"></i> Certificates</h3>
+            <div class="cert-grid" id="cert-grid">
+
+                <div class="cert-card glass-card reveal-up">
+                    <div class="cert-image-wrapper">
+                        <img src="NTI(certificate).jpeg" alt="NTI Data Science Certificate" class="cert-image"
+                            loading="lazy">
+                    </div>
+                    <div class="cert-info">
+                        <h4 class="cert-title">Data Science Track</h4>
+                        <p class="cert-org"><i class="fas fa-building"></i> NTI</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jun 2025 – Jul 2025 · 120 hours</p>
+                        <a href="NTI(certificate).jpeg" download class="cert-download btn btn-sm">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cert-card glass-card reveal-up">
+                    <div class="cert-image-wrapper">
+                        <img src="ALX (certificate).jpeg" alt="ALX Professional Foundations Certificate"
+                            class="cert-image" loading="lazy">
+                    </div>
+                    <div class="cert-info">
+                        <h4 class="cert-title">Professional Foundations</h4>
+                        <p class="cert-org"><i class="fas fa-building"></i> ALX Africa</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Aug 2024 – Oct 2024</p>
+                        <a href="ALX (certificate).jpeg" download class="cert-download btn btn-sm">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT SECTION
+         ═══════════════════════════════════════ -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title reveal-up">
+                <span class="section-number">06.</span> Get In Touch
+            </h2>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <p class="contact-lead">I'm always open to discussing new opportunities, projects, or
+                        collaborations. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:esraa@example.com" data-editable="contact-email">esraa@example.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span data-editable="contact-phone">+20 XXX XXX XXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <a href="https://linkedin.com/" target="_blank"
+                                data-editable="contact-linkedin">linkedin.com/in/esraa</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/" target="_blank"
+                                data-editable="contact-github">github.com/esraa</a>
+                        </div>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form glass-card reveal-right">
+                    <div class="form-group">
+                        <input type="text" id="form-name" name="name" required placeholder=" ">
+                        <label for="form-name">Your Name</label>
+                        <span class="form-highlight"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="form-email" name="email" required placeholder=" ">
+                        <label for="form-email">Your Email</label>
+                        <span class="form-highlight"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="form-message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="form-message">Your Message</label>
+                        <span class="form-highlight"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loader"><i class="fas fa-spinner fa-spin"></i></span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-status" id="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2026 Esraa Mohamed. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:esraa@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════
+         FLOATING ACTION BUTTONS
+         ═══════════════════════════════════════ -->
+    <button class="fab fab-upload" id="fab-upload" aria-label="Upload CV" title="Upload CV / Certificates">
+        <i class="fas fa-cloud-upload-alt"></i>
+    </button>
+    <button class="fab fab-edit" id="fab-edit" aria-label="Toggle Edit Mode" title="Toggle Edit Mode">
+        <i class="fas fa-pen"></i>
+    </button>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ═══════════════════════════════════════
+         UPLOAD MODAL
+         ═══════════════════════════════════════ -->
+    <div class="modal-overlay" id="upload-modal">
+        <div class="modal glass-card">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <h3 class="modal-title"><i class="fas fa-cloud-upload-alt"></i> Upload Documents</h3>
+
+            <div class="upload-section">
+                <h4><i class="fas fa-file-alt"></i> Upload CV</h4>
+                <p class="upload-hint">PDF or DOCX — auto-populates About, Skills, Experience, Projects, Education</p>
+                <div class="drop-zone" id="cv-drop-zone">
+                    <i class="fas fa-file-upload drop-icon"></i>
+                    <p>Drag & drop your CV here</p>
+                    <p class="drop-or">or</p>
+                    <label class="btn btn-sm btn-outline" for="cv-file-input">Browse Files</label>
+                    <input type="file" id="cv-file-input" accept=".pdf,.docx" hidden>
+                </div>
+                <div class="upload-status" id="cv-status"></div>
+            </div>
+
+            <hr class="modal-divider">
+
+            <div class="upload-section">
+                <h4><i class="fas fa-certificate"></i> Upload Certificates</h4>
+                <p class="upload-hint">JPEG, PNG, or PDF — creates certificate cards</p>
+                <div class="drop-zone" id="cert-drop-zone">
+                    <i class="fas fa-image drop-icon"></i>
+                    <p>Drag & drop certificates here</p>
+                    <p class="drop-or">or</p>
+                    <label class="btn btn-sm btn-outline" for="cert-file-input">Browse Files</label>
+                    <input type="file" id="cert-file-input" accept=".jpeg,.jpg,.png,.pdf" multiple hidden>
+                </div>
+                <div class="upload-status" id="cert-status"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         EDIT MODE NOTIFICATION BAR
+         ═══════════════════════════════════════ -->
+    <div class="edit-bar" id="edit-bar">
+        <span><i class="fas fa-pen"></i> Edit Mode Active — Click any highlighted text to edit</span>
+        <button class="btn btn-sm btn-primary" id="save-edits-btn"><i class="fas fa-save"></i> Save All</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
